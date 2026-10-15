@@ -3,7 +3,6 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.enums import ChatMemberStatus
-
 # 1. BOT TOKENINGIZ
 BOT_TOKEN = "8742217058:AAGSMXc36z9wIK-YrXuCPo-aXuy-ZxU5om8"
 
