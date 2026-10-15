@@ -47,7 +47,6 @@ async def start_cmd(message: types.Message):
         )
     else:
         builder = InlineKeyboardBuilder()
-        # LINK SHU YERDA TO'G'RILANDI (slash belgisi qo'shildi)
         tg_link = f"https://t.me{REQUIRED_CHANNEL.replace('@', '')}"
         
         builder.button(text="1. Telegram kanalga a'zo bo'lish 🚀", url=tg_link)
@@ -95,7 +94,7 @@ async def send_game(message: types.Message):
         game_link = GAMES_DATABASE[game_code]
         await message.answer(
             f"🎮 Siz so'ragan o'yin topildi!\n\n"
-            f"👇 Yuklab olishomiz uchun pastdagi linkka bosing:\n{game_link}"
+            f"👇 Yuklab olish uchun pastdagi linkka bosing:\n{game_link}"
         )
     else:
         await message.answer(
@@ -105,3 +104,4 @@ async def send_game(message: types.Message):
 
 if __name__ == "__main__":
     dp.run_polling(bot)
+    
