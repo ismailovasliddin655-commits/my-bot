@@ -7,7 +7,7 @@ from aiogram.enums import ChatMemberStatus
 BOT_TOKEN = "8742217058:AAGSMXc36z9wIK-YrXuCPo-aXuy-ZxU5om8"
 
 # 2. MAJBURIY A'ZO BO'LADIGAN TELEGRAM KANAL
-REQUIRED_CHANNEL = "@fsgame2022" 
+REQUIRED_CHANNEL = "https://t.me/fsgame2022" 
 
 # 3. IJTIMOIY TARMOQLAR LINKLARI
 INSTAGRAM_LINK = "https://instagram.com"
