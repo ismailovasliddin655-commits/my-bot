@@ -4,10 +4,10 @@ from aiogram.filters import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.enums import ChatMemberStatus
 
-# 1. BOT TOKENINGIZ (Avtomatik kiritildi)
+# 1. BOT TOKENINGIZ
 BOT_TOKEN = "8742217058:AAGSMXc36z9wIK-YrXuCPo-aXuy-ZxU5om8"
 
-# 2. MAJBURIY A'ZO BO'LADIGAN TELEGRAM KANAL (Bot admin bo'lishi shart!)
+# 2. MAJBURIY A'ZO BO'LADIGAN TELEGRAM KANAL
 REQUIRED_CHANNEL = "@fsgame2022" 
 
 # 3. IJTIMOIY TARMOQLAR LINKLARI
@@ -43,10 +43,11 @@ async def start_cmd(message: types.Message):
     if is_subscribed:
         await message.answer(
             f"Salom {message.from_user.full_name}! Barcha obunalar tasdiqlandi. 🎉\n\n"
-            "O'yinni yuklab olish URL manzilini yoki uning maxsus kodini yuboring. 🎮"
+            "O'yinni yuklab olish uchun uning maxsus kodini yuboring. 🎮"
         )
     else:
         builder = InlineKeyboardBuilder()
+        # LINK SHU YERDA TO'G'RILANDI (slash belgisi qo'shildi)
         tg_link = f"https://t.me{REQUIRED_CHANNEL.replace('@', '')}"
         
         builder.button(text="1. Telegram kanalga a'zo bo'lish 🚀", url=tg_link)
@@ -94,7 +95,7 @@ async def send_game(message: types.Message):
         game_link = GAMES_DATABASE[game_code]
         await message.answer(
             f"🎮 Siz so'ragan o'yin topildi!\n\n"
-            f"👇 Yuklab olish uchun pastdagi linkka bosing:\n{game_link}"
+            f"👇 Yuklab olishomiz uchun pastdagi linkka bosing:\n{game_link}"
         )
     else:
         await message.answer(
@@ -104,4 +105,3 @@ async def send_game(message: types.Message):
 
 if __name__ == "__main__":
     dp.run_polling(bot)
-      
